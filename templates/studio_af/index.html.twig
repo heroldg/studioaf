@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}StudioAf
+{% endblock %}
+
+{% block stylesheets %}
+	<style>
+        #calendrier {
+            width: 80%;
+            margin:auto;
+        }
+    </style>
+{% endblock %}
+
+
+{% block javascript %}
+<script>
+
+{% block body %}
+
+    <body>
+        
+    
+    <script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+          var calendarEl = document.getElementById('calendrier');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'dayGridMonth',
+           locale: 'fr',
+            timeZone: 'Europe/Paris',
+            headerToolbar: {
+                start: 'prev, next today',
+                center: 'title',
+                end: 'dayGridMonth,timeGridWeek' 
+
+            }
+
+        });
+        calendar.render();
+      });
+
+    </script>
+  
+    <div id='calendrier'></div>
+  </body>
+
+{% endblock %}
+    
+</script>
+{% endblock %}

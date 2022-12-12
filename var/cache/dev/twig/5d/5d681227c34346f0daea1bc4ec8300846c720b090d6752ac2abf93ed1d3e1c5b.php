@@ -119,7 +119,7 @@ class __TwigTemplate_53ed1954097cd91b858ccd1614b7e765ffa471c6047abb5ad18628beb0c
 ";
         // line 19
         $this->displayBlock('body', $context, $blocks);
-        // line 73
+        // line 77
         echo "    
 </script>
 ";
@@ -157,7 +157,7 @@ class __TwigTemplate_53ed1954097cd91b858ccd1614b7e765ffa471c6047abb5ad18628beb0c
             headerToolbar: {
                 start: 'prev,next today',
                 center: 'title',
-                end: 'dayGridMonth,timeGridWeek' 
+                end: 'dayGridMonth,timeGridWeek',
 
             },
             events: ";
@@ -165,15 +165,17 @@ class __TwigTemplate_53ed1954097cd91b858ccd1614b7e765ffa471c6047abb5ad18628beb0c
         echo (isset($context["data"]) || array_key_exists("data", $context) ? $context["data"] : (function () { throw new RuntimeError('Variable "data" does not exist.', 38, $this->source); })());
         echo ", 
             editable: true,
-            eventResizableFromStart: true
+            eventResizableFromStart: true,
+            selectable: true
 
         })
+        
 
         calendar.on('eventChange', (e) => {
           let url = `/api/\${e.event.id}/edit`
           let donnees = {
             \"title\" : e.event.title,
-            //Erreur dans la base de données sur l'orthographe de description, c'est pour ca qu'il y a écrit \"descrition\" et non pas \"description\"
+            //Erreur dans la base de données sur l'orthographe de description, c'est pour ca qu'il y a écrit \"descrition\" et non pas \"description\". Cela reste fonctionnel.
             \"descrition\" : e.event.extendedProps.description,
             \"start\" : e.event.start,
             \"end\" : e.event.end,
@@ -188,6 +190,8 @@ class __TwigTemplate_53ed1954097cd91b858ccd1614b7e765ffa471c6047abb5ad18628beb0c
         xhr.open(\"PUT\", url)
         xhr.send(JSON.stringify(donnees))
         })
+        
+
 
         calendar.render();
       });
@@ -218,7 +222,7 @@ class __TwigTemplate_53ed1954097cd91b858ccd1614b7e765ffa471c6047abb5ad18628beb0c
 
     public function getDebugInfo()
     {
-        return array (  165 => 38,  145 => 20,  135 => 19,  123 => 73,  121 => 19,  117 => 17,  107 => 16,  91 => 7,  81 => 6,  61 => 3,  38 => 1,);
+        return array (  165 => 38,  145 => 20,  135 => 19,  123 => 77,  121 => 19,  117 => 17,  107 => 16,  91 => 7,  81 => 6,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -257,20 +261,22 @@ class __TwigTemplate_53ed1954097cd91b858ccd1614b7e765ffa471c6047abb5ad18628beb0c
             headerToolbar: {
                 start: 'prev,next today',
                 center: 'title',
-                end: 'dayGridMonth,timeGridWeek' 
+                end: 'dayGridMonth,timeGridWeek',
 
             },
             events: {{ data|raw }}, 
             editable: true,
-            eventResizableFromStart: true
+            eventResizableFromStart: true,
+            selectable: true
 
         })
+        
 
         calendar.on('eventChange', (e) => {
           let url = `/api/\${e.event.id}/edit`
           let donnees = {
             \"title\" : e.event.title,
-            //Erreur dans la base de données sur l'orthographe de description, c'est pour ca qu'il y a écrit \"descrition\" et non pas \"description\"
+            //Erreur dans la base de données sur l'orthographe de description, c'est pour ca qu'il y a écrit \"descrition\" et non pas \"description\". Cela reste fonctionnel.
             \"descrition\" : e.event.extendedProps.description,
             \"start\" : e.event.start,
             \"end\" : e.event.end,
@@ -285,6 +291,8 @@ class __TwigTemplate_53ed1954097cd91b858ccd1614b7e765ffa471c6047abb5ad18628beb0c
         xhr.open(\"PUT\", url)
         xhr.send(JSON.stringify(donnees))
         })
+        
+
 
         calendar.render();
       });

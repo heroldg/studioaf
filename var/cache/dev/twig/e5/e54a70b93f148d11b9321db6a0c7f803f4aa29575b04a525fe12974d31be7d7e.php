@@ -54,24 +54,34 @@ class __TwigTemplate_3a56f8cae7ee8b02c42688ff16010a65f8a3566238eb6bdca8c670b6c42
         echo "</title>
 
         <link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>\">
-        <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css\" integrity=\"sha256-5veQuRbWaECuYxwap/IOE/DAwNxgm4ikX7nrgsqYp88=\" crossorigin=\"anonymous\">
+
         ";
-        // line 9
+        // line 10
+        echo "        <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.1.3/darkly/bootstrap.min.css\" integrity=\"sha512-ZdxIsDOtKj2Xmr/av3D/uo1g15yxNFjkhrcfLooZV5fW0TT7aF7Z3wY1LOA16h0VgFLwteg14lWqlYUQK3to/w==\" crossorigin=\"anonymous\" referrerpolicy=\"no-referrer\"/>
+        ";
+        // line 12
+        echo "\t\t<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css\">
+        ";
+        // line 14
+        echo "        <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css\" integrity=\"sha256-5veQuRbWaECuYxwap/IOE/DAwNxgm4ikX7nrgsqYp88=\" crossorigin=\"anonymous\">
+        ";
+        // line 15
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 11
+        // line 19
         echo "
 
         <script src=\"https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js\" integrity=\"sha256-7PzqE1MyWa/IV5vZumk1CVO6OQbaJE4ns7vmxuUP/7g=\" crossorigin=\"anonymous\"></script>
         ";
-        // line 14
+        // line 22
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 16
-        echo "    </head>
+        // line 25
+        echo "
+    </head>
     <body>
         ";
-        // line 18
+        // line 28
         $this->displayBlock('body', $context, $blocks);
-        // line 19
+        // line 29
         echo "    </body>
 </html>
 ";
@@ -93,7 +103,7 @@ class __TwigTemplate_3a56f8cae7ee8b02c42688ff16010a65f8a3566238eb6bdca8c670b6c42
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Welcome!";
+        echo "STUDIO AF";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -102,7 +112,7 @@ class __TwigTemplate_3a56f8cae7ee8b02c42688ff16010a65f8a3566238eb6bdca8c670b6c42
 
     }
 
-    // line 9
+    // line 15
     public function block_stylesheets($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -112,8 +122,10 @@ class __TwigTemplate_3a56f8cae7ee8b02c42688ff16010a65f8a3566238eb6bdca8c670b6c42
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 10
-        echo "        ";
+        // line 16
+        echo "
+
+        ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -122,7 +134,7 @@ class __TwigTemplate_3a56f8cae7ee8b02c42688ff16010a65f8a3566238eb6bdca8c670b6c42
 
     }
 
-    // line 14
+    // line 22
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -132,8 +144,9 @@ class __TwigTemplate_3a56f8cae7ee8b02c42688ff16010a65f8a3566238eb6bdca8c670b6c42
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 15
-        echo "        ";
+        // line 23
+        echo "
+        ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -142,7 +155,7 @@ class __TwigTemplate_3a56f8cae7ee8b02c42688ff16010a65f8a3566238eb6bdca8c670b6c42
 
     }
 
-    // line 18
+    // line 28
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -167,7 +180,7 @@ class __TwigTemplate_3a56f8cae7ee8b02c42688ff16010a65f8a3566238eb6bdca8c670b6c42
 
     public function getDebugInfo()
     {
-        return array (  146 => 18,  136 => 15,  126 => 14,  116 => 10,  106 => 9,  87 => 5,  75 => 19,  73 => 18,  69 => 16,  67 => 14,  62 => 11,  60 => 9,  53 => 5,  47 => 1,);
+        return array (  159 => 28,  148 => 23,  138 => 22,  126 => 16,  116 => 15,  97 => 5,  85 => 29,  83 => 28,  78 => 25,  76 => 22,  71 => 19,  69 => 15,  66 => 14,  63 => 12,  60 => 10,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -176,17 +189,27 @@ class __TwigTemplate_3a56f8cae7ee8b02c42688ff16010a65f8a3566238eb6bdca8c670b6c42
 <html>
     <head>
         <meta charset=\"UTF-8\">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}STUDIO AF{% endblock %}</title>
 
         <link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>\">
+
+        {# BOOTSWATCH #}
+        <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.1.3/darkly/bootstrap.min.css\" integrity=\"sha512-ZdxIsDOtKj2Xmr/av3D/uo1g15yxNFjkhrcfLooZV5fW0TT7aF7Z3wY1LOA16h0VgFLwteg14lWqlYUQK3to/w==\" crossorigin=\"anonymous\" referrerpolicy=\"no-referrer\"/>
+        {# BOOTSTRAP #}
+\t\t<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css\">
+        {# API FULLCALENDAR #}
         <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css\" integrity=\"sha256-5veQuRbWaECuYxwap/IOE/DAwNxgm4ikX7nrgsqYp88=\" crossorigin=\"anonymous\">
         {% block stylesheets %}
+
+
         {% endblock %}
 
 
         <script src=\"https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js\" integrity=\"sha256-7PzqE1MyWa/IV5vZumk1CVO6OQbaJE4ns7vmxuUP/7g=\" crossorigin=\"anonymous\"></script>
         {% block javascripts %}
+
         {% endblock %}
+
     </head>
     <body>
         {% block body %}{% endblock %}

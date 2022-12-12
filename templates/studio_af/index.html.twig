@@ -32,14 +32,16 @@
             headerToolbar: {
                 start: 'prev,next today',
                 center: 'title',
-                end: 'dayGridMonth,timeGridWeek' 
+                end: 'dayGridMonth,timeGridWeek',
 
             },
             events: {{ data|raw }}, 
             editable: true,
-            eventResizableFromStart: true
+            eventResizableFromStart: true,
+            selectable: true
 
         })
+        
 
         calendar.on('eventChange', (e) => {
           let url = `/api/${e.event.id}/edit`
@@ -60,6 +62,8 @@
         xhr.open("PUT", url)
         xhr.send(JSON.stringify(donnees))
         })
+        
+
 
         calendar.render();
       });

@@ -22,47 +22,49 @@ return [
     ],
     [ // $regexpList
         0 => '{^(?'
+                .'|/api/([^/]++)/edit(*:25)'
                 .'|/calendar/([^/]++)(?'
-                    .'|(*:28)'
-                    .'|/edit(*:40)'
-                    .'|(*:47)'
+                    .'|(*:53)'
+                    .'|/edit(*:65)'
+                    .'|(*:72)'
                 .')'
                 .'|/reservation/([^/]++)(?'
-                    .'|(*:79)'
-                    .'|/edit(*:91)'
-                    .'|(*:98)'
+                    .'|(*:104)'
+                    .'|/edit(*:117)'
+                    .'|(*:125)'
                 .')'
                 .'|/_(?'
-                    .'|error/(\\d+)(?:\\.([^/]++))?(*:137)'
-                    .'|wdt/([^/]++)(*:157)'
+                    .'|error/(\\d+)(?:\\.([^/]++))?(*:165)'
+                    .'|wdt/([^/]++)(*:185)'
                     .'|profiler/([^/]++)(?'
                         .'|/(?'
-                            .'|search/results(*:203)'
-                            .'|router(*:217)'
+                            .'|search/results(*:231)'
+                            .'|router(*:245)'
                             .'|exception(?'
-                                .'|(*:237)'
-                                .'|\\.css(*:250)'
+                                .'|(*:265)'
+                                .'|\\.css(*:278)'
                             .')'
                         .')'
-                        .'|(*:260)'
+                        .'|(*:288)'
                     .')'
                 .')'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
-        28 => [[['_route' => 'app_calendar_show', '_controller' => 'App\\Controller\\CalendarController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        40 => [[['_route' => 'app_calendar_edit', '_controller' => 'App\\Controller\\CalendarController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        47 => [[['_route' => 'app_calendar_delete', '_controller' => 'App\\Controller\\CalendarController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
-        79 => [[['_route' => 'app_reservation_show', '_controller' => 'App\\Controller\\ReservationController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        91 => [[['_route' => 'app_reservation_edit', '_controller' => 'App\\Controller\\ReservationController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        98 => [[['_route' => 'app_reservation_delete', '_controller' => 'App\\Controller\\ReservationController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
-        137 => [[['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null]],
-        157 => [[['_route' => '_wdt', '_controller' => 'web_profiler.controller.profiler::toolbarAction'], ['token'], null, null, false, true, null]],
-        203 => [[['_route' => '_profiler_search_results', '_controller' => 'web_profiler.controller.profiler::searchResultsAction'], ['token'], null, null, false, false, null]],
-        217 => [[['_route' => '_profiler_router', '_controller' => 'web_profiler.controller.router::panelAction'], ['token'], null, null, false, false, null]],
-        237 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
-        250 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
-        260 => [
+        25 => [[['_route' => 'app_api_edit', '_controller' => 'App\\Controller\\ApiController::majEvents'], ['id'], ['PUT' => 0], null, false, false, null]],
+        53 => [[['_route' => 'app_calendar_show', '_controller' => 'App\\Controller\\CalendarController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        65 => [[['_route' => 'app_calendar_edit', '_controller' => 'App\\Controller\\CalendarController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        72 => [[['_route' => 'app_calendar_delete', '_controller' => 'App\\Controller\\CalendarController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
+        104 => [[['_route' => 'app_reservation_show', '_controller' => 'App\\Controller\\ReservationController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        117 => [[['_route' => 'app_reservation_edit', '_controller' => 'App\\Controller\\ReservationController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        125 => [[['_route' => 'app_reservation_delete', '_controller' => 'App\\Controller\\ReservationController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
+        165 => [[['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null]],
+        185 => [[['_route' => '_wdt', '_controller' => 'web_profiler.controller.profiler::toolbarAction'], ['token'], null, null, false, true, null]],
+        231 => [[['_route' => '_profiler_search_results', '_controller' => 'web_profiler.controller.profiler::searchResultsAction'], ['token'], null, null, false, false, null]],
+        245 => [[['_route' => '_profiler_router', '_controller' => 'web_profiler.controller.router::panelAction'], ['token'], null, null, false, false, null]],
+        265 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
+        278 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
+        288 => [
             [['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

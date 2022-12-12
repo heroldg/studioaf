@@ -17,26 +17,50 @@
 <script>
 
 {% block body %}
-
+    
     <body>
         
     
     <script>
 
       document.addEventListener('DOMContentLoaded', function() {
-          var calendarEl = document.getElementById('calendrier');
-        var calendar = new FullCalendar.Calendar(calendarEl, {
+          let calendarEl = document.getElementById('calendrier');
+        let calendar = new FullCalendar.Calendar(calendarEl, {
           initialView: 'dayGridMonth',
            locale: 'fr',
             timeZone: 'Europe/Paris',
             headerToolbar: {
-                start: 'prev, next today',
+                start: 'prev,next today',
                 center: 'title',
                 end: 'dayGridMonth,timeGridWeek' 
 
-            }
+            },
+            events: {{ data|raw }}, 
+            editable: true,
+            eventResizableFromStart: true
 
-        });
+        })
+
+        calendar.on('eventChange', (e) => {
+          let url = `/api/${e.event.id}/edit`
+          let donnees = {
+            "title" : e.event.title,
+            //Erreur dans la base de données sur l'orthographe de description, c'est pour ca qu'il y a écrit "descrition" et non pas "description". Cela reste fonctionnel.
+            "descrition" : e.event.extendedProps.description,
+            "start" : e.event.start,
+            "end" : e.event.end,
+            "backgroundColor" : e.event.backgroundColor,
+            "borderColor" : e.event.borderColor,
+            "textColor" : e.event.textColor,
+            "allDay" : e.event.allDay,
+          }
+        // console.log(donnees);
+        let xhr = new XMLHttpRequest
+
+        xhr.open("PUT", url)
+        xhr.send(JSON.stringify(donnees))
+        })
+
         calendar.render();
       });
 

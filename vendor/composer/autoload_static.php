@@ -601,13 +601,20 @@ class ComposerStaticInitf69de0b9cf9199440861b593287a2742
     );
 
     public static $classMap = array (
+        'App\\Controller\\ApiController' => __DIR__ . '/../..' . '/src/Controller/ApiController.php',
+        'App\\Controller\\CalendarController' => __DIR__ . '/../..' . '/src/Controller/CalendarController.php',
         'App\\Controller\\MainController' => __DIR__ . '/../..' . '/src/Controller/MainController.php',
         'App\\Controller\\ReservationController' => __DIR__ . '/../..' . '/src/Controller/ReservationController.php',
         'App\\Controller\\StudioAfController' => __DIR__ . '/../..' . '/src/Controller/StudioAfController.php',
+        'App\\Entity\\Calendar' => __DIR__ . '/../..' . '/src/Entity/Calendar.php',
+        'App\\Entity\\Customer' => __DIR__ . '/../..' . '/src/Entity/Customer.php',
         'App\\Entity\\Reservation' => __DIR__ . '/../..' . '/src/Entity/Reservation.php',
+        'App\\Form\\CalendarType' => __DIR__ . '/../..' . '/src/Form/CalendarType.php',
         'App\\Form\\Reservation1Type' => __DIR__ . '/../..' . '/src/Form/Reservation1Type.php',
         'App\\Form\\ReservationType' => __DIR__ . '/../..' . '/src/Form/ReservationType.php',
         'App\\Kernel' => __DIR__ . '/../..' . '/src/Kernel.php',
+        'App\\Repository\\CalendarRepository' => __DIR__ . '/../..' . '/src/Repository/CalendarRepository.php',
+        'App\\Repository\\CustomerRepository' => __DIR__ . '/../..' . '/src/Repository/CustomerRepository.php',
         'App\\Repository\\ReservationRepository' => __DIR__ . '/../..' . '/src/Repository/ReservationRepository.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Collator' => __DIR__ . '/..' . '/symfony/intl/Resources/stubs/Collator.php',

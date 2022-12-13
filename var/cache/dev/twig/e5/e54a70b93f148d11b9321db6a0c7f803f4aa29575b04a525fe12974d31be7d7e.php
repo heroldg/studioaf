@@ -67,21 +67,24 @@ class __TwigTemplate_3a56f8cae7ee8b02c42688ff16010a65f8a3566238eb6bdca8c670b6c42
         ";
         // line 15
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 19
-        echo "
+        // line 20
+        echo "        <link rel=\"stylesheet\" href=\"";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/style.css"), "html", null, true);
+        echo "\">
+
 
         <script src=\"https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js\" integrity=\"sha256-7PzqE1MyWa/IV5vZumk1CVO6OQbaJE4ns7vmxuUP/7g=\" crossorigin=\"anonymous\"></script>
         ";
-        // line 22
+        // line 24
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 25
+        // line 27
         echo "
     </head>
     <body>
         ";
-        // line 28
+        // line 30
         $this->displayBlock('body', $context, $blocks);
-        // line 29
+        // line 31
         echo "    </body>
 </html>
 ";
@@ -125,6 +128,7 @@ class __TwigTemplate_3a56f8cae7ee8b02c42688ff16010a65f8a3566238eb6bdca8c670b6c42
         // line 16
         echo "
 
+
         ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -134,7 +138,7 @@ class __TwigTemplate_3a56f8cae7ee8b02c42688ff16010a65f8a3566238eb6bdca8c670b6c42
 
     }
 
-    // line 22
+    // line 24
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -144,7 +148,7 @@ class __TwigTemplate_3a56f8cae7ee8b02c42688ff16010a65f8a3566238eb6bdca8c670b6c42
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 23
+        // line 25
         echo "
         ";
         
@@ -155,7 +159,7 @@ class __TwigTemplate_3a56f8cae7ee8b02c42688ff16010a65f8a3566238eb6bdca8c670b6c42
 
     }
 
-    // line 28
+    // line 30
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -178,9 +182,14 @@ class __TwigTemplate_3a56f8cae7ee8b02c42688ff16010a65f8a3566238eb6bdca8c670b6c42
         return "base.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  159 => 28,  148 => 23,  138 => 22,  126 => 16,  116 => 15,  97 => 5,  85 => 29,  83 => 28,  78 => 25,  76 => 22,  71 => 19,  69 => 15,  66 => 14,  63 => 12,  60 => 10,  53 => 5,  47 => 1,);
+        return array (  163 => 30,  152 => 25,  142 => 24,  129 => 16,  119 => 15,  100 => 5,  88 => 31,  86 => 30,  81 => 27,  79 => 24,  71 => 20,  69 => 15,  66 => 14,  63 => 12,  60 => 10,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -202,7 +211,9 @@ class __TwigTemplate_3a56f8cae7ee8b02c42688ff16010a65f8a3566238eb6bdca8c670b6c42
         {% block stylesheets %}
 
 
+
         {% endblock %}
+        <link rel=\"stylesheet\" href=\"{{asset('css/style.css')}}\">
 
 
         <script src=\"https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js\" integrity=\"sha256-7PzqE1MyWa/IV5vZumk1CVO6OQbaJE4ns7vmxuUP/7g=\" crossorigin=\"anonymous\"></script>

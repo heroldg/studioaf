@@ -6,13 +6,20 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Controller\\ApiController' => $baseDir . '/src/Controller/ApiController.php',
+    'App\\Controller\\CalendarController' => $baseDir . '/src/Controller/CalendarController.php',
     'App\\Controller\\MainController' => $baseDir . '/src/Controller/MainController.php',
     'App\\Controller\\ReservationController' => $baseDir . '/src/Controller/ReservationController.php',
     'App\\Controller\\StudioAfController' => $baseDir . '/src/Controller/StudioAfController.php',
+    'App\\Entity\\Calendar' => $baseDir . '/src/Entity/Calendar.php',
+    'App\\Entity\\Customer' => $baseDir . '/src/Entity/Customer.php',
     'App\\Entity\\Reservation' => $baseDir . '/src/Entity/Reservation.php',
+    'App\\Form\\CalendarType' => $baseDir . '/src/Form/CalendarType.php',
     'App\\Form\\Reservation1Type' => $baseDir . '/src/Form/Reservation1Type.php',
     'App\\Form\\ReservationType' => $baseDir . '/src/Form/ReservationType.php',
     'App\\Kernel' => $baseDir . '/src/Kernel.php',
+    'App\\Repository\\CalendarRepository' => $baseDir . '/src/Repository/CalendarRepository.php',
+    'App\\Repository\\CustomerRepository' => $baseDir . '/src/Repository/CustomerRepository.php',
     'App\\Repository\\ReservationRepository' => $baseDir . '/src/Repository/ReservationRepository.php',
     'Attribute' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
     'Collator' => $vendorDir . '/symfony/intl/Resources/stubs/Collator.php',

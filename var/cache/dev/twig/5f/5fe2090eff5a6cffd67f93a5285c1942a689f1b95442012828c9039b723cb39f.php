@@ -68,10 +68,6 @@ class __TwigTemplate_b79e3fac7aec7ff76b9a836fdf91e2b1f3e74093057a421b2b5d11cb0cf
 
         // line 4
         echo "
-\t\t<link rel=\"stylesheet\" href=\"";
-        // line 5
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("app.css"), "html", null, true);
-        echo "\">
         ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -81,7 +77,7 @@ class __TwigTemplate_b79e3fac7aec7ff76b9a836fdf91e2b1f3e74093057a421b2b5d11cb0cf
 
     }
 
-    // line 9
+    // line 8
     public function block_title($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -102,7 +98,7 @@ class __TwigTemplate_b79e3fac7aec7ff76b9a836fdf91e2b1f3e74093057a421b2b5d11cb0cf
 
     }
 
-    // line 13
+    // line 12
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -112,19 +108,19 @@ class __TwigTemplate_b79e3fac7aec7ff76b9a836fdf91e2b1f3e74093057a421b2b5d11cb0cf
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 14
+        // line 13
         echo "    <h1>Create new Calendar</h1>
 
     <div class=\"form-inscription\">
     
     ";
-        // line 18
+        // line 17
         echo twig_include($this->env, $context, "calendar/_form.html.twig");
         echo "
     </div>
 
     <a href=\"";
-        // line 21
+        // line 20
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_calendar_index");
         echo "\">back to list</a>
 ";
@@ -148,7 +144,7 @@ class __TwigTemplate_b79e3fac7aec7ff76b9a836fdf91e2b1f3e74093057a421b2b5d11cb0cf
 
     public function getDebugInfo()
     {
-        return array (  128 => 21,  122 => 18,  116 => 14,  106 => 13,  85 => 9,  73 => 5,  70 => 4,  60 => 3,  37 => 1,);
+        return array (  124 => 20,  118 => 17,  112 => 13,  102 => 12,  81 => 8,  70 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -157,7 +153,6 @@ class __TwigTemplate_b79e3fac7aec7ff76b9a836fdf91e2b1f3e74093057a421b2b5d11cb0cf
 
         {% block stylesheets %}
 
-\t\t<link rel=\"stylesheet\" href=\"{{asset('app.css')}}\">
         {% endblock %}
     
 

@@ -15,10 +15,12 @@ class StudioAfController extends AbstractController
     public function index(CalendarRepository $calendar)
     {
         $events = $calendar->findAll();
-        // dd($events);
-        foreach($events as $event){
+        if (!$events) {
+            $rdvs = [];
+        }
+        foreach ($events as $event) {
             $rdvs[] = [
-                'id' => $event->getId(), 
+                'id' => $event->getId(),
                 'start' => $event->getStart()->format('Y-m-d H:i:s'),
                 'end' => $event->getEnd()->format('Y-m-d H:i:s'),
                 'title' => $event->getTitle(),
@@ -28,10 +30,10 @@ class StudioAfController extends AbstractController
                 'textColor' => $event->getTextColor(),
                 // 'allDay' => $event -> isAllDay(),
 
-            ]; 
+            ];
         }
 
-        $data = json_encode($rdvs); 
+        $data = json_encode($rdvs);
 
         return $this->render('studio_af/index.html.twig', compact('data'));
     }

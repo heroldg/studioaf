@@ -14,3 +14,12 @@ cd636e,::1,GET,http://localhost:8001/connexion,1670962196,58db10,404
 aa7b72,::1,GET,http://localhost:8001/calendar/,1670962197,,500
 59d368,::1,GET,http://localhost:8001/,1670964307,eef812,500
 eef812,::1,GET,http://localhost:8001/,1670964307,,500
+397ea0,::1,GET,http://localhost:8001/,1670965279,f3e7a9,500
+f3e7a9,::1,GET,http://localhost:8001/,1670965279,,500
+ce9bbc,::1,GET,http://localhost:8001/,1670965281,1cd51a,500
+1cd51a,::1,GET,http://localhost:8001/,1670965281,,500
+f7cf05,::1,GET,http://localhost:8001/,1670965299,5bf527,404
+5bf527,::1,GET,http://localhost:8001/,1670965299,,404
+d28af7,::1,GET,http://localhost:8001/,1670965311,eb8ec9,500
+eb8ec9,::1,GET,http://localhost:8001/,1670965311,,500
+747714,::1,GET,http://localhost:8001/,1670965324,,200
